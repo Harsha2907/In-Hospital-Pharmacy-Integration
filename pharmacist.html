@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pharmacist Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">💊 Pharmacist Dashboard</h1>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+      <button onclick="downloadBackup()">⬇ Download Backup</button>
+      <input type="file" id="importFile" style="display: none;" accept=".json" />
+      <button onclick="document.getElementById('importFile').click()">⬆ Import Backup</button>
+    </div>
+
+    <ul id="prescriptionList" class="prescription-list"></ul>
+  </div>
+  <script src="js/pharmacist.js"></script>
+</body>
+</html>

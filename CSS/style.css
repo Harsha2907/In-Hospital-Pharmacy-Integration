@@ -1,0 +1,143 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Main card/container */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.container:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+  font-weight: 700;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  background-color: #3a86ff;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* Prescription list container */
+.prescription-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prescription list item card */
+.prescription-list li {
+  background: #ffffff;
+  border-left: 6px solid #3a86ff;
+  margin-bottom: 18px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prescription-list li:hover {
+  transform: scale(1.015);
+  background-color: #eef6ff;
+}
+
+/* Base button styling */
+button {
+  padding: 10px 18px;
+  font-size: 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Checked (fulfilled) button */
+.checked-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.checked-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Add: Secondary button style (optional) */
+.secondary-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+.input-field {
+  padding: 10px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
